@@ -61,7 +61,7 @@ def _create_spd_matrix(dimension: int) -> Any:
     >>> _is_matrix_spd(spd_matrix)
     True
     """
-    rng = np.random.default_rng()
+    rng = np.random.default_rng(8)
     random_matrix = rng.normal(size=(dimension, dimension))
     spd_matrix = np.dot(random_matrix, random_matrix.T)
     assert _is_matrix_spd(spd_matrix)
