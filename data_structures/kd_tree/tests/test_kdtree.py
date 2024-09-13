@@ -60,7 +60,7 @@ def test_nearest_neighbour_search():
     points = hypercube_points(num_points, cube_size, num_dimensions)
     kdtree = build_kdtree(points.tolist())
 
-    rng = np.random.default_rng()
+    rng = np.random.default_rng(10)
     query_point = rng.random(num_dimensions).tolist()
 
     nearest_point, nearest_dist, nodes_visited = nearest_neighbour_search(
